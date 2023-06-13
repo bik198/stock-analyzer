@@ -5,10 +5,8 @@ import Papa from "papaparse";
 
 type StockData = {
 	Name: string;
-	Date: string;
-	notes: string;
 	Value: number;
-	Change: string;
+	newDate: number;
 };
 
 const StockAnalyzer: React.FC = () => {
@@ -47,10 +45,8 @@ const StockAnalyzer: React.FC = () => {
 	const calculateLargestIncrease = (
 		dataWithDateSorting: {
 			Name: string;
-			newDate: string;
-			notes: string;
 			Value: number;
-			Change: string;
+			newDate: number;
 		}[]
 	) => {
 		let largestIncrease: { company: string; largestIncrease: number }[] = [];
